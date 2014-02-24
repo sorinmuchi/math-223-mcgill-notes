@@ -1,8 +1,47 @@
 \chapter{First Lecture}
 
-\section{Cauchy-Schwarz}
+\section{Cauchy-Schwarz Inequality}
 
-  Given
-  \begin{align}
-    \forall u, v \in \mathbb{R}^n |u \cdot v| \leq \|u\| \cdot \|v\|
-  \end{align}
+	\subsection{Theorem}
+		\begin{align}
+			\forall u, v \in \mathbb{R}^n |u \cdot v| \leq \|u\| \cdot \|v\|
+		\end{align}
+  
+	\subsection{Proof}
+	
+		Let $tu + v$ be a family of vectors where t is in $\mathbb{R}$.
+	
+		\begin{align}
+			\forall w \in \mathbb{R}^n 0 \leq w \cdot w \\
+			0 \leq (tu + v) \cdot (tu + v) \\
+			0 \leq tu \cdot v  + 2u \cdot v + v \cdot tu + v \cdot v \\
+			\forall a = u \cdot u, b = 2u \cdot v: 0 \leq t^2
+		\end{align}
+		
+	//TODO CJB REREAD THE FIRST PAGE (having trouble in low light)
+		
+\section{Triangle Inequality}
+
+	\subsection{Definition}
+	
+		\begin{align}
+			\|u+v\| \leq \|u\| + \|v\|
+		\end{align}
+		
+	\subsection{Proof}
+	
+		We show that $\|u+v\|^2 \leq (\|u\| + \|v\|)^2$.
+		
+		\begin{align}
+			\|u+v\|^2 &= (u+v) \cdot (u+v) = u \cdot u + 2u \cdot v + v \dot v \\
+				&= \|u\|^2 + 2u \cdot v + \|v\|^2 \\
+				&\leq \|u\|^2 + 2\|u \cdot v \| + \|v\|^2  \\
+				&\leq \|u\|^2 + 2\|u|\ \|v\| + \|v\|^2 & \textrm{by Cauchy} \\
+				&\leq (\|u\| + \|v\|)^2
+		\end{align}
+		
+\section{Complex Number}
+
+	\subsection{Introduction}
+	
+		Complex numbers introduce a unit $i$ such that $i^2 = -1$ and generate a set of numbers called $\mathbb{C}$.
