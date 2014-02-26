@@ -1,5 +1,3 @@
-\chapter{First Lecture}
-
 \section{Cauchy-Schwarz Inequality}
 
 	\subsection{Theorem}
@@ -40,8 +38,69 @@
 				&\leq (\|u\| + \|v\|)^2
 		\end{align}
 		
-\section{Complex Number}
+\section{Complex Numbers}
 
 	\subsection{Introduction}
 	
 		Complex numbers introduce a unit $i$ such that $i^2 = -1$ and generate a set of numbers called $\mathbb{C}$.
+		Usually complex numbers are represented as some combination $a + ib$ where $a, b \in \mathbb{R}$.
+		
+		In complex space you can solve any polynomial equation and the number of solution is the degree \footnote{No matter what people told me I found it hard to understand the importance of complex numbers, but it turns out they become really important in numerical analysis.  In stuff like predator-prey models, oscillations in population dynamics are results of complex eigenvalues.  You can determine whether or not the oscillations of such a population are stable by checking if the imaginary part of the complex values are positive or negative.  In black holes, everything spirals into the black hole along a circle, which can only mathematically be described using complex numbers.  It's surprisingly cool... gets a lot more cool with the stability of orbits for satellites.  You want a satellite to have a slightly unstable orbit so that it doesn't take much energy to shift the position of the satellite. -CJB}.
+		In complex space //TODO return to 1/0 section.
+		
+		A complex number is a pair of real numbers with operations "+" and "*."
+		The following demonstrate how complex numbers operate.
+		\begin{align}
+			(a,b) + (c,d) = (a+c, b+d) \\
+			(a,b) * (c,d) = (ac - bd, ad + bc) \\
+			(0,1) * (0,1) = (-1,0) = -(1,0) \implies i^2 = 1 \\
+			a(1,0) + b(0,1) = (a,b) = a + ib \\
+		\end{align}
+		
+		
+		The following demonstrates the logic of complex numbers.
+		\begin{align}
+			(a+ib)(c+id) &=ac + aid + ibc + (ib)(id) \\
+					&= ac + i(ad + bc) + i^2bd \\
+					&= (ac - bd) + i(ad+bc)
+		\end{align}
+		
+	\subsection{Definition}
+	
+		Formally:
+		\begin{align}
+			\forall a,b \in \mathbb{R}: z = a+ib \\
+			a = realpart[z] = [Re(z)]\\
+			b = imaginarypart[z] = [Im(z)]
+		\end{align}
+		
+\section{Complex Conjugation}
+
+	The complex conjugate of some complex number z is given by $\overline{z} = a - ib$.
+
+	\subsection{Definitions}
+	
+		\begin{itemize}
+			\item $z = a + ib, \overline{z} = (a - ib)$
+			\item $z*\overline{z} = (a+ib)(a-ib) = a^2 + b^2$
+			\item $|z| = \sqrt{a^2 + b^2} = sqrt{z*\overline{z}}$
+		\end{itemize}
+		
+	\subsection{Theorems}
+	
+		\begin{itemize}
+			\item $\forall z*\overline{z}: z*\overline{z} \in R$
+			\item $\forall z*\overline{z}: z*\overline{z} \geq 0$
+			\item $\forall z \in \mathbb{C}, z \neq 0: \exists w \in \mathbb{C} \mid zw =1$ \\
+					Proof:
+					\begin{align}
+						&& z = a + ib, w = \dfrac{a-ib}{a^2 + b^2} \\
+						zw &= (a + ib)\dfrac{a-ib}{a^2 + b^2} = \dfrac{a^2 - aib + aib - iib^2}{a^2 + b^2} \\
+							&= \dfrac{a^2 + b^2}{a^2 + b^2} = 1
+					\end{align}
+			\item $|z_1z_2| = |z_1||z_2|$\\
+					Proof:
+					$|z_1z_2| = (z_1z_2)(\overline{z_1z_2}) = z_1z_2\overline{z_1}\overline{z_2} = z_1\overline{z_1}z_2\overline{z_2} = |z_1||z_2|$
+		\end{itemize}
+		
+	//TODO generate figures for description of complex conjugate as a reflection of the complex number
