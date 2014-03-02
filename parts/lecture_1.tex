@@ -77,7 +77,7 @@
 \section{Complex Conjugation}
 
 	The complex conjugate of some complex number z is given by $\overline{z} = a - ib$.
-
+	
 	\subsection{Definitions}
 	
 		\begin{itemize}
@@ -102,5 +102,78 @@
 					Proof:
 					$|z_1z_2| = (z_1z_2)(\overline{z_1z_2}) = z_1z_2\overline{z_1}\overline{z_2} = z_1\overline{z_1}z_2\overline{z_2} = |z_1||z_2|$
 		\end{itemize}
+	
+	
+	\subsection{Visualisation}
 		
-	//TODO generate figures for description of complex conjugate as a reflection of the complex number
+		In the complex plane, complex conjugate is a reflection in the x-axis.
+		//TODO generate figures for description of complex conjugate as a reflection of the complex number
+		
+\section{Complex Spaces}
+
+	$\mathbb{C}^n$ is the complex n space that consists of n tuples of complex numbers.
+	Numbers in $\mathbb{C}^n$ can be added, scaled, and otherwise manipulated much like $\mathbb{R}^n$.
+	
+	\subsection{Definitions}
+	 
+	 	\subsubsection{Dot Product in $\mathbb{C}^n$}
+	 	
+		\begin{align}
+			(z_1, \ldots, z_2) \cdot (w_1, \ldots, w_n) = z_1\overline{w_1} + \ldots + z_n\overline{w_n}
+		\end{align}
+		
+		This agrees with the dot product on $\mathbb{R}^n$, as $\mathbb{R}^n$ is a subset of $\mathbb{C}^n$.  For $\mathbb{R}$, $a + 0i = a - 0i$, so the conjugate makes no difference.
+		
+	\subsection{Theorems}
+	
+		\subsubsection{$v \cdot v$ is in $\mathbb{R}^n$, and nonnegative; $v \cdot v = 0 \iff v = 0$}
+		If $v$ is $\mathbb{C}^n$ then $v \cdot v$ is in $\mathbb{R}^n$, and nonnegative; $v \cdot v = 0 \iff v = 0$
+				\begin{align}
+					v = (z_1, \ldots, z_2) \\
+					v \cdot v = z_1\overline{z_1} + \ldots + z_n\overline{z_n} \\
+					z_k = a_k + ib_k \\
+					z_k\overline{z_k} = a_k^2 + b_k^2 \\
+					v \cdot v = a_1^2 + b_1^2 + \ldots + a_n^2 + b_n^2
+				\end{align}
+				
+		This implies $v \cdot v$ is a non-negative i and 0 only if it equals 0 and it equals 0 only if $a_k = 0$ and $b_k = 0$ for all k between 1 and n.
+		In this case, v is 0.
+		
+\section{Matrices as Arrays}
+
+	We can look at matrices as arrays, where a matrix is an array with n rows each with m elements.
+	
+	The shape of a matrix is defined by n and m.
+	If two matrices have the same shape they can be added, where each element of the matrices are added to the corresponding elements of the other matrix.
+	
+	Scaling a matrix consists of multiplying each element by some scalar.
+	
+	Multiplying a matrix consists of multiplying each row by a corresponding column in the other matrix.
+	It's a little more complicated but presumably people are familiar with this from maths 133.
+	
+	The transposed matrix consists of a matrix where each row and column index has been switched.
+	
+	\subsection{Matrix Multiplication}
+	
+		\begin{align}
+			(AB)C = A(BC) & \textrm{associative} \\
+			A(B+C) = AB + AC & \textrm{distributive} \\
+			(B+C)A = BA + CA \\
+			AB \neq BA
+		\end{align}
+		
+	\subsection{Definitions}
+	
+			\begin{description}
+				\item[square matrix] An n by n matrix.
+				\item[trace] The trace of a square matrix $A = [a_{ij}]$ is given by $tr(A) = \sum_{i=1}^{n} a_{ii}$.
+				\item[identity matrix] The n by m identity matrix is the $I_n = [a_{ij}]$ where $\forall i = j, a_{ij} = 1 \wedge \forall i \neq j, a_{ij} = 0$
+			\end{description}
+			
+	\subsection{Theorem}
+		
+		\subsubsection{$A_{mn}I_n = A,\ \ I_nB_{nm} = B$}
+		
+			\begin{align}
+				\sum_{k=1}^{n} a_{ik}I_{ik} = a_{ij}
+			\end{align}
