@@ -153,6 +153,8 @@
 	
 	The transposed matrix consists of a matrix where each row and column index has been switched.
 	
+	The matrix power is a matrix multiplied by itself some $n$ times.
+	
 	\subsection{Matrix Multiplication}
 	
 		\begin{align}
@@ -168,12 +170,34 @@
 				\item[square matrix] An n by n matrix.
 				\item[trace] The trace of a square matrix $A = [a_{ij}]$ is given by $tr(A) = \sum_{i=1}^{n} a_{ii}$.
 				\item[identity matrix] The n by m identity matrix is the $I_n = [a_{ij}]$ where $\forall i = j, a_{ij} = 1 \wedge \forall i \neq j, a_{ij} = 0$
+				\item[Matrix Power] 
+					$\forall square_matrix[A]\ \ A^0 = I \\
+					\forall invertible[A]\ \ A^{-1} = inverse[A]$
+				\item[Block Matrix] A matrix partitioned in submatrices.
+				\item[Linear Equation]  A linear equation with unknowns is an expression of the form $a_1x_1 + \ldots + a_nx_n = b$ where some vector $a_n$ and the value $b$ are in some number system.
+				A solution vector $x_n$ exists that satisfies this equation.
 			\end{description}
 			
-	\subsection{Theorem}
+	\subsection{Theorems}
 		
 		\subsubsection{$A_{mn}I_n = A,\ \ I_nB_{nm} = B$}
 		
 			\begin{align}
 				\sum_{k=1}^{n} a_{ik}I_{ik} = a_{ij}
 			\end{align}
+			
+		\subsubsection{$A_{ik}B_{kj}$}
+			
+			\begin{align}
+				\forall A_{ik}B_{kj} \\
+				AB = [C_{ij}] \\
+				C_{ij} = \sum_{k = i}^{n} A_{ik}B_{kj}
+			\end{align}
+		
+			
+	\subsection{Note on Excluded Material}
+	
+		I have not included some theorems on addition and multiplication and the like.
+		I also have not typeset notes on how to do proofs.
+		The assignments seem to do an excellent job of covering this material.
+		Should I find the time (probably will), these will be typeset after the midterm to complete the notes properly.
