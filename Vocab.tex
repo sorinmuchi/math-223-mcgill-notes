@@ -1,0 +1,405 @@
+\documentclass[hidelinks, 11pt, openleft]{scrartcl}
+
+\input{config/bendell-notes-config}
+
+\title{Midterm Vocabularly List}
+\author{Cody Mazza-Anthony \\ 260405012}
+\date{March 2014}
+
+\begin{document}
+
+\maketitle
+
+\section{Vocabularly from Chapters 1-3}
+\subsection*{Dot Product in $\mathbb{R}^2$ (1.4 pg. 4)}
+
+\begin{itemize}
+    \item The $u \cdot v$ is obtained by multiplying corresponding components and adding the resulting products. The vectors $u$ and $v$ are said to be \textit{orthogonal} (or \textit{perpendicular}) if their dot product is zero --that is, if $u \cdot v = 0$.
+    \item The \textit{dot product} or \textit{inner product} of $u$ and $v$ is defined by:
+    \begin{center}
+        $ u \cdot v = a_{1}b_{1} + a_{2}b_{2} + \dots + a_{n}b_{n}$
+    \end{center}
+\end{itemize}
+
+\subsection*{Norm (Length) of a Vector (1.4 pg. 5)}
+
+\begin{itemize}
+    \item The \textit{norm} and \textit{length} of a vector $u$ in $\mathbb{R}^n$, denoted by $\|u\|$, is defined to be the nonnegative square root of $u \cdot u$. 
+    \item If $u = (a_{1}, \dots, a_{n})$, then
+        \begin{center}
+            $\|u\| = \sqrt{u \cdot u} = \sqrt{a_1^2 + \dots + a_n^2}$ 
+        \end{center}
+    \item $\|u\|$ is the square root of the sum of squares of each of its components of $u$. Thus, $\|u\| \ge 0$, and $\|u\|=0$ if and only if $u=0$.
+    \item A vector $u$ is called a unit vector if $\|u\|=1$ or, equivalently, if $u \cdot u = 1$. For any nonzero vector $v$ in $\mathbb{R}^n$, the vector
+        \begin{center}
+            $\hat{v} = \frac{v}{\|v\|}$
+        \end{center}
+        is the unique unit vector in the same direction as $v$. The process of finding $\hat{v}$ from $v$ is called \textit{normalizing} $v$.
+\end{itemize}
+
+\subsection*{Distance and Angle Between Vectors (1.4 pg. 6)}
+\begin{itemize}
+    \item The \textit{distance} between vectors $u=(a_{1}, \dots. a_{n})$ and $v=(b_{1}, \dots , b_{n})$ in $\mathbb{R}^n$ is defined by:
+        \begin{center}
+            $d(u,v) = \|u-v\| = \sqrt{(a_1-b_1)^2 + \dots + (a_n-b_n)^2}$ 
+        \end{center}
+    \item The angle $\theta$ between nonzero vectors $u,v$ in $\mathbb{R}^n$ is defined by
+        \begin{center}
+            ${cos\theta} = {u \cdot v \over \|u\|\|v\| }$
+        \end{center}
+\end{itemize}
+
+\subsection*{Complex Numbers (1.7 pg. 11)}
+\begin{itemize}
+    \item Formally, a complex number is an ordered pair (a,b) of real numbers.
+    \item The complex number (0,1) is denoted by $i$. Important Property: $i^2 = -1$
+    \item A complex number can be written $z=(a,b)= a + bi$
+\end{itemize}
+
+\subsection*{Complex Conjugation (1.7 pg. 12)}
+\begin{itemize}
+    \item Consider the complex number $z=a+bi$. The \textit{conjugate} of $z$ is denoted and defined by: $\overline{z} = \overline{a+bi} = a-bi$.
+\end{itemize}
+
+\subsection*{Absolute Value of a Complex Number (1.7 pg. 12)}
+\begin{itemize}
+    \item The \textit{absolute value} of $z$, denoted by $|z|$, is defined to be the nonnegative square root of $z\overline{z}$. Namely, $|z|= \sqrt{z\overline{z}}= \sqrt{a^2+b^2}$
+\end{itemize}
+
+\subsection*{Dot Product in $C^n$ (1.8 pg. 13)}
+\begin{itemize}
+    \item The dot or inner product of $u$ and $v$ is denoted by
+    \begin{align*}
+        u \cdot v = u_1\overline{v_1} + \cdots + u_n\overline{v_n}
+    \end{align*}
+\end{itemize}
+
+\subsection*{Matrix Multiplication (2.5 pg. 31)}
+
+    \begin{align*}
+        c_{ij} &= a_{i1}b_{1j} + \cdots + a_{ip}b_{pj} \\
+        &= \sum_{k=1}^{p} a_{ik}b_{kj}
+    \end{align*}
+
+\subsection*{Polynomials in Matrices ()}
+\vspace{10 cm}
+
+\subsection*{Invertible Matrices (2.9 pg. 34)}
+\begin{itemize}
+    \item A square matrix $A$ is said to be \textit{invertible} or \textit{nonsingular} if there exists a matrix $B$ such that: 
+    \begin{align*}
+        AB=BA=I
+    \end{align*}
+    where $I$ is the identity matrix. Such a matrix $B$ is unique. That is, if $AB_1=B_1A = I$ and $AB_2=B_2A=I$, then
+    \begin{align*}
+        B_1=B_1I=B_1(AB_2) = (B_1A)B_2=IB_2=B_2
+    \end{align*}
+    \item We call such a matrix B the inverse of A and dneote it by $A^-1$. Observe that the above relatin is symmetric; that is, if $B$ is the inverse $A$, then $A$ is the inverse of $B$.
+\end{itemize}
+
+\subsection*{Equivalent Systems of Linear Equations (3.3 pg. 60)}
+\begin{itemize}
+    \item Two systems of linear equations have the same solutoins if and only if each equation in each system is alinear combination of the equations in the other system.
+    \item Two systems of linear equations are said to be equivalent if they have the same solutions. 
+\end{itemize}
+
+\subsection*{Augmented Matrix of a Linear System (3.2 pg. 59)}
+\begin{itemize}
+    \item Is the matrix of coefficients plus the last column which is made up of constants, sometimes written $M=[A,B]$.
+\end{itemize}
+
+\subsection*{Coefficient Matrix of a Linear System (3.3 pg. 59)}
+\begin{itemize}
+    \item Is the matrix of coefficients which is associated with a general system of $m$ equations and $n$ unknowns.
+\end{itemize}
+
+\subsection*{Matrix Equation of a system of linear Equations (3.2 pg. 58)}
+\begin{itemize}
+    \item Is a list of linear equations with the same unknowns -- that is, a system of $m$ linear equations and $n$ unknowns.
+    \item The coefficients, constants, and equations can be represented in a matrix as the two above definitions state(augmented or coefficient matrices).
+\end{itemize}
+
+\subsection*{Elementary Row Operations(ERO) (3.3 pg. 61) }
+\begin{itemize}
+    \item The following operations on a system of linear equations:
+        \begin{enumerate}
+            \item Interchange two of the equations.
+            \item Replace an equation by a nonzero multiple of itself.
+            \item Replace an equation by the sum of a multiple of another equation and itself.
+        \end{enumerate}
+\end{itemize}
+
+\subsection*{Elementary Matrices (3.12 pg. 84)}
+\begin{itemize}
+    \item Let $e$ denote an elementary row operation and let $e(A)$ denote the results of applying the operation $e$ to a matrix $A$. Now let $E$ be the matrix obtained by applying $e$ to the identity matrix $I$; that is,
+    \begin{align*}
+        E=e(I)
+    \end{align*}
+    \item Then $E$ is called the \textit{elementary matrix} corresponding to the elementary row operation $e$. Note that $E$ is always a square matrix
+\end{itemize}
+
+\subsection*{Row Equivalence (3.7 pg. 72)}
+\begin{itemize}
+    \item A matrix $A$ is said to be \textit{row equivalent} to a matrix $B$, written $A~B$
+    \item If $B$ can be obtained from $A$ by a sequence of elementary row operations. In the case that $B$ is also an echelon matrix, $B$ is called an \textit{echelon form} of $A$.
+\end{itemize}
+
+\subsection*{Echelon Form (3.7 pg. 70)}
+\begin{itemize}
+    \item A matrix $A$ is called an \textit{echelon matrix}, or is said to be in \textit{echelon form},if the following two conditions hold (where a leading nonzero element of a row A is the first nonzero element in the row):
+    \begin{enumerate}
+        \item All zero rows, if any, are at the bottom of the matrix
+        \item Each leading nonzero entry in a row is to the right of the leading nonzero entry in the preceding row. 
+    \end{enumerate}
+\end{itemize}
+
+\subsection*{Row Canonical Form (3.7 pg. 71)}
+\begin{itemize}
+    \item A matrix $A$ is said to be in \textit{row canonical form} if it is an echelon matrix -- that is, if it satisfies the above properties (1) and (2), and if it satisfies the following additional two properties 
+    \item The major difference between an echelon matrix and a matrix in row canonical form is that in an echelon matrix there must be zeros below the pivots, but in a matrix in row canonical form, each pivot must also equal 1 and there must also be zeros above the pivots. 
+    \item The zero matrix of any size and the identity matrix $I$ of any size are important special examples of matrices in row canonical form. 
+\end{itemize}
+
+\subsection*{Free Variables and Pivot Variables (3.5 pg. 65)}
+\begin{itemize}
+    \item The leading unknowns in a system are called \textit{pivot} variables, and the other unknowns are called \textit{free variables}.
+\end{itemize}
+
+\subsection*{Gaussian Elimination (3.8 pg. 73)}
+\begin{itemize}
+    \item Algorithms to convert matrices to echelon form and row canonical form by using elementary row operations, are simply restatements of the Gaussian elimination as applied to matrices rather than linear equations.
+\end{itemize}
+
+\subsection*{Homogeneous Systems of Linear Equations associated to a Matrix (3.11 pg. 81)}
+\begin{itemize}
+    \item A system of linear equations is said to be \textit{homogeneous} if all the constant terms are zero. Thus, a homogeneous system has the form $AX=0$
+    \item Such a system has the zero vector as a solution. We are usually interested in whether or not the system has a nonzero solution.
+    \item Here $r$ denotes the number of equations in echelon form and $n$ denotes the number of unknowns. Thus, the echelon system has $n-r$ free variables.
+    \begin{enumerate}
+    \item $r=n$. The system has only the zero solution. 
+    \item $r < n$. The system has a nonzero solution. 
+    \end{enumerate}
+\end{itemize}
+
+
+\section{Vocabularly from Chapter 4}
+
+    \subsection*{Vector Space (4.2 pg. 112)}
+    \begin{itemize}
+        \item Let $V$ be a nonempty set with two operations:
+        \begin{enumerate}
+            \item Vector Addition: This assigns to any $u, v \in V$ a sum $u+v$ in $V$.
+            \item Scalar Multiplication: This assigns to any $u \in V, k \in K$ a product $ku \in V$.
+        \end{enumerate}
+        \item There are additional axioms that need to hold located on pg. 113 of the textbook. They can be summarized by saying $V$ is a \textit{commutative group} under addition. Also, \textit{subtraction} in $V$ is defined by $u-v = u + (-v)$, where $-v$ is a unique negative of $v$.
+    \end{itemize}
+    
+    \subsection*{Subspace (4.5 pg. 117)}
+    \begin{itemize}
+        \item Let $V$ be a vector space over field $K$ and let $W$ be a subset of $V$. Then $W$ is a \textit{subspace} of $V$ if $W$ is itself a vector space over $K$ with respect to the operations of vector addition and scalar multiplication on $V$.
+        \item The way you would show that any set $W$ is a vector space is to show that $W$ satisfies the eight axioms of a vector space. However, if $W$ is a subset of a vector space $V$, then some of the axioms automatically hold in $W$, because they already hold in $V$. 
+        \item To identify a vector space suppose $W$ is a subset of a vector space $V$. Then $W$ is a subspace of $V$ if the following two conditions hold:
+            \begin{enumerate}
+                \item The zero vector 0 belongs to $W$
+                \item For ever $u, v \in W, k \in K$: (i) The sume $u+v \in W$ (ii) The multiple $ku \in W$.
+            \end{enumerate}
+    \end{itemize}
+    
+    \subsection*{Linear Combination (4.4 pg. 115)}
+    \begin{itemize}
+    \item A vector $v$ in $V$ is a linear combination of vectors $u_{1}, u_{2}, \dots , u_{m}$ in V if there exists scalars $a_{1}, a_{2}, \dots , a_{m}$ in K such that
+        \begin{center}
+            $v = a_{1}u_{1} + a_{2}u_{2} + \dots + a_{m}u_{m}$
+        \end{center}
+    \item Alternatively, $v$ is a linear combination of $u_{1}, u_{2}, \dots , u_{m}$ if there is a solution to the vector equation
+        \begin{center}
+            $v = x_{1}u_{1} + x_{2}u_{2} + \dots + x_{m}u_{m}$
+        \end{center}
+    where $x_{1},x_{2}, \dots , x_{m}$ are unknown scalars.
+        \item A system can have a unique solution, many solutions, or no solution. No solution means that the system cannot be written as a linear combination.
+    \end{itemize}
+    
+    \subsection*{Spanning Set (4.4 pg. 116)}
+        \begin{itemize}
+            \item Let $V$ be a vector space over $K$. Vectors $u_{1}, u_{2}, \dots , u_{m}$ in $V$ are said to span V or to form a spanning set of $V$ if every $v$ in $V$ is a linear combination of the vectors $u_{1}, u_{2}, \dots , u_{m}$ - that is, if there exists scalars $a_{1}, a_{2}, \dots , a_{m}$ in $K$ such that 
+            \begin{center}
+                $v = a_{1}u_{1} + a_{2}u_{2} + \dots + a_{m}u_{m}$
+            \end{center}
+        \end{itemize}
+
+    \subsection*{Span of a Set of Vectors ()}
+    \vspace{10 cm}
+    
+    \subsection*{Row Space of a Matrix ()}
+    \vspace{10 cm}
+    
+    \subsection*{Column Space of a Matrix ()}
+    \vspace{10 cm}
+
+    \subsection*{Linear Dependence (4.7 pg. 121)}
+        \begin{itemize}
+            \item We say that vectors $v_1, \cdots ,v_m$ in $V$ are \textit{linearly depedent} if there exists scalars $a_1, \cdots, a_m$ in $K$, not all of them 0, such that
+                \begin{align*}
+                    a_1v_1 + \cdots + a_mv_m = 0
+                \end{align*}
+            \item Otherwise, we say that the vectors are \textit{linearly independent}.
+        \end{itemize}
+    
+    \subsection*{Linear Independence (4.7 pg. 121}
+        \begin{itemize}
+            \item Consider the vector equation
+            \begin{align*}
+                x_1v_1 + \cdots + x_mv_m = 0
+            \end{align*}
+            \item where the x's are unknown scalars in $K$. This equation always has the \textit{zero solution} $x_1=0, \cdots,x_m=0$. Suppose this is the only solution; that is, suppose we can show:
+            \begin{align*}
+                x_1v_1 + \cdots + x_mv_m = 0
+            \end{align*}
+            implies
+            \begin{align*}
+                x_1=0, \cdots ,x_m=0
+            \end{align*}
+            \item Then the vectors $v_1, \cdots ,v_m$ are \textit{linearly independent}
+        \end{itemize}
+    
+    \subsection*{Basis (4.8 pg. 124)}
+        \begin{itemize}
+            \item Definition 1: A set $S = \{u_1, \cdots, u_n\}$ of vectors is a \textit{basis} of $V$ if it has the following two properties: (1) S is linearly independent (2) $S$ spans $V$.
+            \item Definition 2: A set $S = \{u_1, \cdots, u_n\}$ of vectors is a \textit{basis} of $V$ if every $v \in V$ can be written uniquely as a linear combination of the basis vectors. 
+        \end{itemize}
+        
+    \subsection*{Dimension ()}
+    \vspace{10 cm}
+    
+    \subsection*{Rank of Matrix (4.9 pg. 126)}
+    \begin{itemize}
+        \item The \textit{rank} of a matrix $A$, written rank(A), is equal to the maximum number of linearly independent rows of $A$ or, equivalently, the dimension of the row space of $A$.
+        \item The rank can be equal to the number of pivots in echelon form.
+        \item The rank can correspond to the nonzero rows in echelon form, which form a basis for the row space of the original vector.
+    \end{itemize}
+    
+    \subsection*{Sum of two Subspaces (4.10 pg. 129)}
+    \begin{itemize}
+        \item Suppose $U$ and $W$ are subspaces of $V$. Then one can shows that $U+W$ is a subspace of $V$. Recall that $U \cap W$ is also a subspace of $V$. 
+        \item Suppose $U$ and $W$ are finite-dimensional subspaces of a vector space $V$. Then $U+W$ has finite dimension and
+            \begin{align*}
+                dim(U+W) = dimU + dimW - dim(U \cap W)
+            \end{align*}
+    \end{itemize}
+    
+    \subsection*{Direct Sum (4.10 pg. 129)}
+    \begin{itemize}
+        \item The vector space $V$ is said to be the \textit{direct sum} of its subspaces $U$ and $W$, denoted by
+        \begin{align*}
+            V=U \oplus W
+        \end{align*}
+        \item if every $v in V$ can be written in one and only one way as $v=u+w$ where $u \in U$ and $w \in W$.
+    \end{itemize}
+    
+    \subsection*{Coordinates (4.11 pg. 130)}
+    \begin{itemize}
+        \item Let $V$ be an n-dimensional vector space over $K$ with basis $S=\{u_1, \cdots , u_n\}$. Then any vector $v \in V$ can be expressed uniquely as a linear combination of the basis vectors ini $S$, say
+        \begin{align*}
+            v = a_1u_1 + \cdots + a_nu_n
+        \end{align*}
+        \item Then $n$ scalars $a_1, \cdots , a_n$ are called the \textit{coordinates} of $v$ relative to the basis $S$, and they form a vector $[a_1, \cdots , a_n]$ in $K^n$ called the \textit{coordinate vector} of $v$ relative to $S$. 
+        \item We denote this vector by $[v]_S$, or simple $[v]$, when $S$ is understood. Thus,
+        \begin{align*}
+            [v]_S = [a_1, \cdots , a_n]
+        \end{align*}
+    \end{itemize}
+    
+    \subsection*{Isomorphism of vector spaces (4.11 pg. 130)}
+    \vspace{10 cm}
+    
+    
+\section{Vocabularly from Chapters 5 and 6}
+
+\subsection*{Function/Mapping (5.2 pg. 164)}
+\begin{itemize}
+    \item Let $A$ and $B$ be arbitrary sets. Suppose to each element in $a \in A$ there is assigned a unique element of B; called the \textit{image} of $a$. 
+    \item The collection of $f$ of such assignments is called a \textit{mapping} from $A$ to $B$, and is denoted by
+        \begin{center}
+            $f: A \to B$
+        \end{center}
+    \item The set $A$ is called the \textit{domain} of the mapping, and $B$ is called the \textit{target set}.
+    \item One may also view a mapping $f: A \to B$ as a computer that, for each input value $a \in A$, produces a unique output $f(a) \in B$.
+\end{itemize}
+
+\subsection*{Range/Image (5.2 pg. 164)}
+\begin{itemize}
+    \item Is a subset of the \textit{target set} that the function actually maps to. 
+    \item Sometimes the "barred" arrow $\mapsto$ is used to denote the range of an arbitrary element $x \in A$ under a mapping $f: A \to B$ by writing $x \mapsto f(x)$.
+\end{itemize}
+
+
+\subsection*{One-to-One Mapping (5.2 pg. 166)}
+\begin{itemize}
+    \item A mapping $f: A \to B$ is said to be \textit{one-to-one} (or 1-1 or injective) if different elements of A have distinct images; that is,
+        \begin{center}
+            If $f(a) = f(a')$, then $a=a'$
+        \end{center}
+\end{itemize}
+
+\subsection*{Onto Mapping (5.2 pg. 166)}
+\begin{itemize}
+    \item A mapping $f: A \to B$ is said to be \textit{onto} (or $f$ maps $A$ onto $B$ or \textit{surjective}) if ever $b \in B$ is the range of at least one $a \in A$.
+\end{itemize}
+
+\subsection*{Linear Transformation (5.3 pg. 167)}
+\begin{itemize}
+    \item Let $V$ and $U$ be vector spaces over the same field $K$. A mapping $F: V \to U$ is called a \textit{linear mapping} or \textit{linear transformation} if it satisfies the following two conditions:
+        \begin{enumerate}
+            \item For any vectors $v, w \in V, F(v+w) = F(v) + F(w)$.
+            \item For any scalar $k$ and vector $v \in V, F(kv) = kF(v)$.
+        \end{enumerate}
+    \item Basically, $F: V \to U$ is linear if it "preserves" the two basic operations of a vector space, that of vector addition and that of scalar multiplication.
+\end{itemize}
+
+\subsection*{Kernal (5.4 pg. 169)}
+
+\begin{itemize}
+    \item Let $F: V \to U$ be a linear transformation/mapping. The \textit{kernel} of $F$, written Ker F, is the set of elements in $V$ that map into the zero vector 0 in $U$; that is,
+    \begin{center}
+        Ker $F = \{v \in V: F(v) = 0\}$
+    \end{center}
+\end{itemize}
+
+\subsection*{Image (5.4 pg. 169)}
+
+\begin{itemize}
+    \item The \textit{image} of $F$, written Im $F$, is the set of image points in $U$; that is,
+    \begin{center}
+        Im $F = \{u \in U: there exists v \in V for which F(v) = u\}$
+    \end{center}
+\end{itemize}
+
+\subsection*{Rank (5.4 pg. 171)}
+\begin{itemize}
+    \item Let $F: V \to U$ be a linear mapping. The \textit{rank} of $F$ is defined to be the dimension of its image.
+    \begin{center}
+        rank(F) = dim(Im F)
+    \end{center}
+\end{itemize}
+
+\subsection*{Nullity (5.4 pg. 171)}
+\begin{itemize}
+    \item The \textit{nullity} of $F$ is defined to be the dimension of its kernel
+    \begin{center}
+        nullity(F) = dim(Ker F)
+    \end{center}
+\end{itemize}
+
+\subsection*{Linear Transformation associated to a Matrix (Matrix Mapping) () }
+\vspace{10 cm}
+
+\subsection*{Singular Linear Transformation (5.5 pg. 172)}
+\begin{itemize}
+    \item Let $F: V \to U$ be a linear mapping. Recall that $F(0) = 0$. $F$ is said to be $singular$ if the image of some nonzero vector $v$ is 0 -- that is, if there exists $v \ne 0$ such that $F(v) = 0$.
+\end{itemize}
+
+\subsection*{Matrix Representation of Linear Transformation ()}
+\vspace{10 cm}
+
+
+\end{document}
