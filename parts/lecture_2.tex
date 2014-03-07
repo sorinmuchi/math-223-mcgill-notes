@@ -28,6 +28,8 @@
 
       \item[Pivot] A pivot is the first nonzero entry in a row of a matrix in row ecehlon form.
 
+      \item[Gaussian Elimination] A matrix can be converted into reduced row echelon form by performing row separations to put it into echelon form, dividing throughout so that every pivot is 1, and then using the 1 to zero out every space above pivots. 
+
     \end{description}
   
   \subsection{Theorems}
@@ -40,10 +42,47 @@
 
       A matrix is not invertible if there exists some nonzero vector such that the matrix multiplied by the vector is 0.
 
-    
+    \subsubsection{Products of Invertible Matrices}
+
+      A product of matrices is invertible if and only if each of the individual matrices are invertible.
+
+    \subsubsection{A matrix is row equivalent to a unique matrix in RCF}
+      
+      Wellp... the subsection name sums it up.
+      A proof is further below.
 
   \subsection{Proofs}
 
     \subsubsection{Every ERO has an inverse operation}
 
       BLURRY PAGE, GO BACK!
+
+    \subsubsection{A product of a set of matrices is invertible if and only if each of the set of matrices is invertible}
+
+      \begin{align}
+        \forall invertible[A], \exists v \neq 0\ \ s.t.\ \ Av = 0 \\
+        B = A^{-1} \\
+        B(Av) = B \cdot [0] = [0] \\
+        (BA)v = (A^{-1}A)v = Iv = v \implies v = 0
+      \end{align}
+
+      In words, since this proof can be somewhat confusing (or at least it confused me): if A is invertible there must be some nonzero vector such that Av is 0.
+      Creating some matrix B that is the inverse of the vector A, should you multiply Av (0) by B it should be 0... or it could be v, depending on how you frame the problem.
+      So v must be 0 and thus the matrix must be invertible.
+
+      Another proof.
+      Suppose a set of matrices A are all invertible and their product is B.
+      If you repeatedly multiply both sides of this equality by a corresponding inverse of A to replace the set of matrices with the identity matrix, you will get $I = (A_n^{-1} \ldots A_1^{-1})B$.
+      This can be reduced to $(A_n^{-1} \ldots A_1^{-1}) = B^{-1}$ by multiplying both sides by the inverse of B.
+      Therefore, the inverse of B exists and the product of a set of invertible matrices is invertible.
+
+      We can use this to show each element is invertible.
+      If $A_1A_2\ldots A_n$ is invertible so is $(A_1\ldots A_{n-1})A_n$ by associativity.
+      The expression has two terms and the term in paranetheses is invertible and $A_n$ is invertible if we know the second term.
+
+    \subsubsection{A matrix is row equivalent to a unique matrix in RCF}
+
+      We know that $M_1$ and $M_2$ represent equivalent linear systems if and only if these matrices are row equivalent, thus there is a sequence of EROs that can convert matrices to each other.
+      $M_2$ can be transformed into a matrix $N$ in RCF by some sequence of EROS.
+      $M_1$ can be transformed into a matrix $N$ in RCF by some sequence of EROS.
+      All three of these matrices are equivalent.
